@@ -1,0 +1,19 @@
+<!-- app/code/KunalUpadhyay/SecondFooter/view/frontend/templates/modal.phtml -->
+<div id="guessing-game-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2><?= __('Guess the Number Game') ?></h2>
+        <p><?= __('Enter a number between 1 and 50:') ?></p>
+        <input type="number" id="guess-input" min="1" max="50">
+        <button id="guess-button"><?= __('Guess') ?></button>
+        <p id="feedback-message"></p>
+        <div id="guessed-numbers"></div>
+    </div>
+</div>
+<script type="text/javascript">
+    require(['jquery', 'guessingGame'], function($, guessingGame){
+        $(document).ready(function(){
+            guessingGame();
+        });
+    });
+</script>

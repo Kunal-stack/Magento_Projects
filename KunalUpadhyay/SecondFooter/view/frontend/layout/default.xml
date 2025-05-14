@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- app/code/KunalUpadhyay/SecondFooter/view/frontend/layout/default.xml -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="before.body.end">
+            <container name="second.footer.container" as="secondFooterContainer" label="Second Footer Container" htmlTag="div" htmlClass="second-footer">
+                <block class="Magento\Framework\View\Element\Template" name="second.footer" template="KunalUpadhyay_SecondFooter::second_footer.phtml"/>
+            </container>
+            <block class="Magento\Framework\View\Element\Template" name="guessing.game.modal" template="KunalUpadhyay_SecondFooter::modal.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

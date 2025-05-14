@@ -1,0 +1,165 @@
+/* Custom styles for the second footer */
+.second-footer {
+    background: linear-gradient(to right, #007bff, #6c757d); /* Blue to gray gradient */
+    color: #fff; /* White text for better contrast */
+    padding: 20px;
+    text-align: center;
+    border-top: 5px solid #0056b3; /* Optional: Add a top border for separation */
+
+    &:hover {
+        background: linear-gradient(to left, #6c757d, #007bff);
+    }
+}
+
+.open-modal-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+        background-color: #0056b3;
+        transform: scale(1.1); /* Slightly enlarge the button on hover */
+    }
+
+    &:active {
+        transform: scale(0.95); /* Slightly shrink the button when clicked */
+    }
+}
+
+@media (max-width: 767px) {
+    .second-footer {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .open-modal-button {
+        display: none; /* Ensure the button is completely hidden */
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+
+    .modal-content {
+        background: linear-gradient(to bottom, #f39c12, #f1c40f);
+        margin: auto;
+        padding: 30px;
+        border: 10px;
+        text-align: center;
+        width: 80%;
+        max-width: 400px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        animation: slide-down 0.5s ease;
+
+        .close-button {
+            font-size: 24px;
+            color: #fff;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            cursor: pointer;
+        }
+
+        h2 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        input {
+            font-size: 18px;
+            padding: 10px;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            width: 80%;
+        }
+
+        #guess-input {
+            width: 50%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #2ecc71;
+            }
+        }
+
+        #guess-button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+
+            &:hover {
+                background-color: #218838;
+            }
+        }
+
+        #feedback-message {
+            margin-top: 15px;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        #guessed-numbers {
+            margin-top: 20px;
+            color: #fff;
+
+            h3 {
+                font-size: 18px;
+                margin-bottom: 10px;
+                text-decoration: underline;
+            }
+
+            ul {
+                padding: 0;
+
+                li {
+                    list-style: none;
+                    font-size: 16px;
+                    margin: 5px;
+                }
+            }
+        }
+    }
+}
+
+/* Slide-down animation */
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
